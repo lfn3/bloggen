@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title>Bloggen Sample</title>
+		<meta charset="utf-8"> 
+	</head>
+	<body>
+		<section>
+			<h1> Posts: </h1>
+			<ul>
+
+			{% for post in posts %}
+				<li><a href="posts/{{post|lower|replace(' ', '-')}}.html">{{post}}</a></li>
+			{% endfor %}
+			</ul>
+		</section>
+	</body>
+</html>
